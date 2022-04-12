@@ -1,4 +1,12 @@
-s = '01234567891011121314151617'
-for i in range(0, len(s), 5):
-    print(s[i], end='')
+import matplotlib.pyplot as plt
+measured_data = [10, 29, 88]
+plt.plot(measured_data)
+plt.show()
+
+measured_data_str = [str(item) for item in measured_data]
+print(measured_data, measured_data_str)
+
+
+with open("data.txt", "w") as outfile:
+    outfile.write("\n".join(measured_data_str))
     
